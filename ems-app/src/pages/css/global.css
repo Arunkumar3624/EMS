@@ -1,0 +1,207 @@
+/* 🌐 Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", "Segoe UI", sans-serif;
+  background: linear-gradient(180deg, #eef3ff, #f9fbfd);
+  color: #1f1f1f;
+  overflow-x: hidden;
+}
+
+/* ========== 🌈 HERO SECTION ========== */
+.hero {
+  position: relative;
+  text-align: center;
+  color: white;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #4f8ef7, #6dd5fa);
+  border-bottom-left-radius: 60px;
+  border-bottom-right-radius: 60px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+}
+
+.hero-overlay h1 {
+  font-size: 2.3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.hero-overlay p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* ========== 🧩 MAIN CONTAINER ========== */
+.personal-page,
+.performance-page {
+  padding: 3rem 1rem;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.dashboard-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* ========== 🪄 DASHBOARD CARD WRAPPERS ========== */
+.dashboard-card {
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+.dashboard-card h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* ========== ✍️ FORM SECTION ========== */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.MuiFormControl-root,
+.MuiTextField-root {
+  border-radius: 10px !important;
+}
+
+.MuiButton-root {
+  border-radius: 12px !important;
+  padding: 0.8rem !important;
+  font-weight: 600 !important;
+  text-transform: none !important;
+  background: linear-gradient(90deg, #4f8ef7, #6dd5fa);
+  box-shadow: 0 4px 10px rgba(79, 142, 247, 0.35);
+  transition: all 0.3s ease;
+}
+
+.MuiButton-root:hover {
+  background: linear-gradient(90deg, #3e7be6, #4fc6ef);
+  transform: translateY(-1px);
+}
+
+/* ========== 📊 TABLE SECTION ========== */
+.table-wrapper {
+  overflow-x: auto;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  background: white;
+  padding: 1rem;
+}
+
+.modern-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.modern-table thead {
+  background: #4f8ef7;
+  color: #fff;
+}
+
+.modern-table th,
+.modern-table td {
+  text-align: left;
+  padding: 12px 16px;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.modern-table tbody tr:hover {
+  background: #f3f8ff;
+  transition: background 0.3s ease;
+}
+
+.modern-table th {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+/* ========== 📈 CHART CARDS ========== */
+.chart-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: space-between;
+}
+
+.chart-card {
+  flex: 1 1 45%;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.08);
+  padding: 1rem;
+  transition: all 0.3s ease;
+}
+
+.chart-card:hover {
+  transform: translateY(-4px);
+}
+
+/* ========== 📱 RESPONSIVE DESIGN ========== */
+@media (max-width: 900px) {
+  .chart-section {
+    flex-direction: column;
+  }
+
+  .chart-card {
+    width: 100%;
+  }
+
+  .hero {
+    padding: 3rem 1rem;
+  }
+
+  .hero-overlay h1 {
+    font-size: 1.8rem;
+  }
+
+  .dashboard-card {
+    padding: 1.2rem;
+  }
+}
+
+/* ========== 💫 ANIMATIONS ========== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========== 🧠 UTILITIES ========== */
+.text-center {
+  text-align: center;
+}
+
+.mt-2 {
+  margin-top: 1rem;
+}
+
+.mb-2 {
+  margin-bottom: 1rem;
+}

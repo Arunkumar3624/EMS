@@ -1,0 +1,134 @@
+.auth-page {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Animated circles in the background */
+.auth-bg .circle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  animation: float 6s infinite ease-in-out;
+}
+
+.circle1 {
+  width: 250px;
+  height: 250px;
+  top: 10%;
+  left: 15%;
+  animation-delay: 0s;
+}
+
+.circle2 {
+  width: 300px;
+  height: 300px;
+  bottom: 15%;
+  right: 10%;
+  animation-delay: 2s;
+}
+
+.circle3 {
+  width: 200px;
+  height: 200px;
+  top: 50%;
+  right: 40%;
+  animation-delay: 4s;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.auth-container {
+  position: relative;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 40px;
+  border-radius: 16px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  color: #fff;
+  z-index: 2;
+}
+
+.auth-container h2 {
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+}
+
+.subtitle {
+  margin-bottom: 25px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+}
+
+.auth-form input {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.85);
+  color: #333;
+  font-size: 1rem;
+  outline: none;
+}
+
+.auth-form input::placeholder {
+  color: #555;
+}
+
+.auth-form button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(90deg, #00c9ff, #92fe9d);
+  border: none;
+  border-radius: 8px;
+  color: #222;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.auth-form button:hover {
+  transform: translateY(-2px);
+}
+
+.error-text {
+  color: #ff4c4c;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.switch-mode {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.switch-mode span {
+  color: #92fe9d;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.switch-mode span:hover {
+  color: #00c9ff;
+}

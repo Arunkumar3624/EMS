@@ -1,0 +1,260 @@
+/* -------------------------------
+  Global Reset
+---------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f4f6f8;
+  color: #2f3640;
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #222;
+  margin-bottom: 0.5rem;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  color: #007bff;
+}
+
+/* -------------------------------
+  Buttons
+---------------------------------*/
+button {
+  cursor: pointer;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+button:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background-color: #4c8bf5;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #3a72d1;
+}
+
+.btn-secondary {
+  background-color: #718093;
+  color: white;
+}
+
+.btn-ghost {
+  background-color: transparent;
+  border: 1px solid #4c8bf5;
+  color: #4c8bf5;
+}
+
+/* -------------------------------
+  Forms & Inputs
+---------------------------------*/
+input, select, textarea {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.form-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  background-color: #fff;
+  padding: 15px 20px;
+  border-radius: 6px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+  margin-bottom: 20px;
+}
+
+.form-box button {
+  flex: 0 0 auto;
+}
+
+/* -------------------------------
+  Headers
+---------------------------------*/
+.employee-header, .admin-header {
+  background-color: #4c8bf5;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.muted {
+  color: #718093;
+  font-size: 0.9rem;
+}
+
+/* -------------------------------
+  Layouts
+---------------------------------*/
+.employee-grid, .admin-grid {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 20px;
+  padding: 0 20px 20px 20px;
+}
+
+.admin-sidebar {
+  background-color: white;
+  padding: 15px 10px;
+  border-radius: 6px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+}
+
+.employee-overview, .admin-main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* -------------------------------
+  Navigation
+---------------------------------*/
+.employee-nav, .admin-sidebar nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.employee-nav a, .admin-sidebar nav a {
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  color: #2f3640;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+}
+
+.employee-nav a.active, .admin-sidebar nav a.active {
+  background-color: #4c8bf5;
+  color: white;
+}
+
+.employee-nav a:hover, .admin-sidebar nav a:hover {
+  background-color: #3a72d1;
+  color: white;
+}
+
+/* -------------------------------
+  Overview Cards
+---------------------------------*/
+.overview-card {
+  background-color: white;
+  padding: 15px 20px;
+  border-radius: 6px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+/* -------------------------------
+  Tables
+---------------------------------*/
+.employee-table, .admin-table, .styled-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #dcdde1;
+  text-align: left;
+}
+
+th {
+  background-color: #f0f0f0;
+}
+
+tr:hover {
+  background-color: #f1f6ff;
+}
+
+.clickable {
+  cursor: pointer;
+  color: #4c8bf5;
+  text-decoration: underline;
+}
+
+.actions button {
+  margin-right: 5px;
+  background-color: #e84118;
+  color: white;
+}
+
+.actions button:hover {
+  background-color: #c23616;
+}
+
+/* -------------------------------
+  Error & Loading Messages
+---------------------------------*/
+.error, .error-text, .error-message {
+  color: #e84118;
+  font-weight: 500;
+}
+
+.loading {
+  font-style: italic;
+  color: #718093;
+}
+
+/* -------------------------------
+  Dashboard Content / Outlet
+---------------------------------*/
+.dashboard-content, .admin-outlet {
+  margin-top: 20px;
+}
+
+/* -------------------------------
+  Responsive
+---------------------------------*/
+@media (max-width: 992px) {
+  .employee-grid, .admin-grid {
+    grid-template-columns: 1fr;
+  }
+  .employee-nav, .admin-sidebar nav ul {
+    flex-direction: row;
+    overflow-x: auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .form-box {
+    flex-direction: column;
+  }
+}

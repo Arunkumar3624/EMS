@@ -1,0 +1,119 @@
+/* -------------------------------
+  Global Reset
+---------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f7f9fc;
+  color: #2f3640;
+  line-height: 1.6;
+}
+
+/* -------------------------------
+  Links
+---------------------------------*/
+a {
+  text-decoration: none;
+  color: #4c8bf5;
+  transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+  color: #3a72d1;
+}
+
+/* -------------------------------
+  Buttons
+---------------------------------*/
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  background-color: #4c8bf5;
+  color: #fff;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* -------------------------------
+  Inputs
+---------------------------------*/
+input, select, textarea {
+  border: 1px solid #dcdde1;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 1rem;
+  outline: none;
+  width: 100%;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #4c8bf5;
+  box-shadow: 0 0 0 2px rgba(76, 139, 245, 0.2);
+}
+
+/* -------------------------------
+  Tables
+---------------------------------*/
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th, td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #dcdde1;
+}
+
+th {
+  background-color: #4c8bf5;
+  color: #fff;
+  text-align: left;
+}
+
+/* -------------------------------
+  Containers & Layout
+---------------------------------*/
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.page-container {
+  padding: 20px;
+}
+
+/* -------------------------------
+  Utility Classes
+---------------------------------*/
+.error-text {
+  color: #e84118;
+  font-weight: 500;
+}
+
+.success-text {
+  color: #44bd32;
+  font-weight: 500;
+}
+
+.clickable {
+  cursor: pointer;
+  text-decoration: underline;
+  color: #4c8bf5;
+}
+
+.clickable:hover {
+  color: #3a72d1;
+}

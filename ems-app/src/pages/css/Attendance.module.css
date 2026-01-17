@@ -1,0 +1,132 @@
+/* 🔹 Page Background */
+.attendance-page {
+  background: linear-gradient(
+      135deg,
+      rgba(245, 248, 255, 0.9),
+      rgba(235, 240, 255, 0.9)
+    ),
+    url("/assets/attendance-bg.jpg") center/cover no-repeat;
+  min-height: 100vh;
+  padding: 2rem;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 🔹 Hero Section */
+.hero {
+  width: 100%;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(10px);
+  border-radius: 1rem;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.hero h1 {
+  font-size: 2.2rem;
+  color: #004aad;
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* 🔹 Main Container */
+.attendance-container {
+  width: 100%;
+  max-width: 1300px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* 🔹 Floating Cards */
+.floating-card {
+  background: #ffffffcc;
+  border-radius: 1rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.floating-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* 🔹 Table Container */
+.tableContainer {
+  width: 100%;
+  border-radius: 0.8rem;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* 🔹 Table */
+.tableContainer table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.tableContainer th,
+.tableContainer td {
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+  font-size: 0.95rem;
+}
+
+.tableContainer th {
+  background-color: #004aad;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.tableContainer tr:hover {
+  background-color: rgba(0, 74, 173, 0.05);
+}
+
+/* 🔹 Align icons inside cells */
+.tableContainer td span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+/* 🔹 Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 🔹 Responsive Design */
+@media (max-width: 768px) {
+  .hero {
+    padding: 1.5rem;
+  }
+
+  .floating-card {
+    padding: 1.5rem;
+  }
+
+  .tableContainer th,
+  .tableContainer td {
+    font-size: 0.85rem;
+    padding: 0.8rem;
+  }
+}
